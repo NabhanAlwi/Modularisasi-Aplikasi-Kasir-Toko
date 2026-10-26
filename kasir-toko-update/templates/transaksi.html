@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><title>Transaksi</title>
+<style>body{font-family:sans-serif;margin:30px} textarea,input{display:block;margin:6px 0 14px;padding:6px} nav a{margin-right:15px} .struk{border:1px dashed #333;padding:15px;width:340px;font-family:monospace}</style></head>
+<body><nav><a href="/">Produk</a><a href="/transaksi">Transaksi Baru</a><a href="/laporan">Laporan</a></nav>
+<h1>Transaksi Baru</h1>
+{% if pesan %}<p style="color:#b00">{{ pesan }}</p>{% endif %}
+{% if struk %}<div class="struk"><b>{{ struk.no }}</b><br>{{ struk.tanggal }}<br><br>
+{% for it in struk['items'] %}{{ it.nama }} x{{ it.qty }} = {{ "Rp {:,.0f}".format(it.qty*it.harga).replace(",", ".") }}<br>{% endfor %}<br>
+Subtotal: {{ "Rp {:,.0f}".format(struk.subtotal).replace(",", ".") }}<br>Diskon: {{ "Rp {:,.0f}".format(struk.diskon).replace(",", ".") }}<br>
+PPN 11%: {{ "Rp {:,.0f}".format(struk.ppn).replace(",", ".") }}<br><b>Total: {{ "Rp {:,.0f}".format(struk.total).replace(",", ".") }}</b><br>
+Bayar: {{ "Rp {:,.0f}".format(struk.bayar).replace(",", ".") }}<br>Kembali: {{ "Rp {:,.0f}".format(struk.kembali).replace(",", ".") }}</div>{% endif %}
+<form method="post">
+<label>ID Member (kosongkan jika bukan member)</label><input name="member">
+<label>Item, satu per baris: KODE,JUMLAH</label><textarea name="items" rows="5" cols="30">P001,2</textarea>
+<label>Uang bayar</label><input name="bayar" type="number">
+<button>Proses</button>
+</form></body></html>

@@ -1,0 +1,7 @@
+services:
+  kasir-toko:
+    build: .
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./data.json:/app/data.json

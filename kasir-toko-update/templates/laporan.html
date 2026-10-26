@@ -1,0 +1,8 @@
+<!doctype html>
+<html><head><title>Laporan</title><style>body{font-family:sans-serif;margin:30px} nav a{margin-right:15px}</style></head>
+<body><nav><a href="/">Produk</a><a href="/transaksi">Transaksi Baru</a><a href="/laporan">Laporan</a></nav>
+<h1>Laporan Harian {{ tanggal }}</h1>
+<form><input type="date" name="tanggal" value="{{ tanggal }}"><button>Lihat</button></form>
+<p>Jumlah transaksi: {{ jumlah }}<br>Omzet: {{ omzet }}</p>
+<h3>Produk terlaris</h3><ol>{% for n, q in terlaris %}<li>{{ n }} ({{ q }})</li>{% endfor %}</ol>
+</body></html>

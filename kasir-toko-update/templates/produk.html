@@ -1,0 +1,14 @@
+<!doctype html>
+<html><head><title>Kasir Toko</title>
+<style>body{font-family:sans-serif;margin:30px} table{border-collapse:collapse} td,th{border:1px solid #ccc;padding:6px 10px} nav a{margin-right:15px}</style></head>
+<body><nav><a href="/">Produk</a><a href="/transaksi">Transaksi Baru</a><a href="/laporan">Laporan</a></nav>
+<h1>Daftar Produk</h1>
+{% if menipis %}<p style="color:#b00">Stok menipis: {{ menipis|map(attribute='nama')|join(", ") }}</p>{% endif %}
+<table><tr><th>Kode</th><th>Nama</th><th>Kategori</th><th>Harga</th><th>Stok</th></tr>
+{% for p in produk %}
+<tr style="background:{{ '#fde2e2' if p['stok'] < 5 else 'white' }}">
+<td>{{ p['kode'] }}</td><td>{{ p['nama'] }}</td><td>{{ p['kategori'] }}</td>
+<td>{{ "Rp {:,.0f}".format(p['harga']).replace(",", ".") }}</td><td>{{ p['stok'] }}</td>
+</tr>
+{% endfor %}
+</table></body></html>
