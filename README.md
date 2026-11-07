@@ -60,3 +60,13 @@ Hasil pengujian menunjukkan bahwa 31 test berhasil
 dijalankan tanpa kegagalan.
 
 ![Hasil Pengujian Keseluruhan](test-keseluruhan.png)
+
+### 4. diagram testing
+
+![flowchart Testing](mermaid-diagram.png)
+
+### 5. contoh pengujian gagal
+
+Pengujian gagal disebabkan oleh ketidaksesuaian antara jumlah produk aktual dengan jumlah produk yang diharapkan. Data pengujian menyediakan tiga produk, sedangkan nilai ekspektasi sengaja diubah menjadi empat. Akibatnya, pengujian menghasilkan status FAIL. Skenario ini digunakan untuk membuktikan bahwa unit testing mampu mendeteksi kesalahan atau ketidaksesuaian hasil.
+
+![Pengujian gagal](Pengujian gagal.png) 
