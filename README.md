@@ -13,7 +13,7 @@ Pengujian dilakukan untuk memastikan fungsi pengelolaan
 produk berjalan dengan baik, meliputi daftar produk,
 filter kategori, dan pemeriksaan stok menipis.
 
-![Produk Service](docs/screenshots/test-produk-service.png)
+![Produk Service](test-produk-service.png)
 
 #### B. Transaksi Service
 
