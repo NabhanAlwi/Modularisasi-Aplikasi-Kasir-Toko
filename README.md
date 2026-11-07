@@ -21,7 +21,7 @@ Pengujian dilakukan terhadap proses pencarian produk,
 perhitungan diskon, pembuatan nomor transaksi,
 validasi pembayaran, dan pemrosesan transaksi web maupun API.
 
-![Transaksi Service](docs/screenshots/test-transaksi-service.png)
+![Transaksi Service](test-transaksi-service.png)
 
 #### C. Laporan Service
 
@@ -29,7 +29,7 @@ Pengujian dilakukan untuk memastikan laporan harian,
 omzet, jumlah transaksi, dan produk terlaris
 dapat dihitung dengan benar.
 
-![Laporan Service](docs/screenshots/test-laporan-service.png)
+![Laporan Service](test-laporan-service.png)
 
 #### D. Repository
 
@@ -37,7 +37,7 @@ Pengujian dilakukan terhadap fungsi pengambilan
 dan penyimpanan data produk, member, dan transaksi
 pada file JSON.
 
-![Repository](docs/screenshots/test-repository.png)
+![Repository](test-repository.png)
 
 ### 2. Integration Testing
 
@@ -46,7 +46,7 @@ modul service dan repository dapat bekerja sama
 dalam proses transaksi web dan API, termasuk
 penanganan transaksi yang gagal karena stok kurang.
 
-![Integration Testing](docs/screenshots/test-integrasi.png)
+![Integration Testing](test-integrasi.png)
 
 ### 3. Hasil Pengujian Keseluruhan
 
@@ -59,4 +59,4 @@ python3 -m unittest discover -s tests -v
 Hasil pengujian menunjukkan bahwa 31 test berhasil
 dijalankan tanpa kegagalan.
 
-![Hasil Pengujian Keseluruhan](docs/screenshots/test-keseluruhan.png)
+![Hasil Pengujian Keseluruhan](test-keseluruhan.png)
